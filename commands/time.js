@@ -1,27 +1,19 @@
-//probably needs fixing since i dont think it will tell the time in chat
-//halp me carnagion
-
-//Slash Command builder
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
-//Slash Command
 const data = new SlashCommandBuilder();
-data.setName("timecheck");
-data.setDescription("Shows the current time in isleward");
+data.setName("time");
+data.setDescription("Shows the current date and time in IsleWard.");
 
-//the time
+const execute = async function(interaction)
+{
+    let timestamp = Date.now();
+    let date = new Date(timestamp);
+    await interaction.reply({
+        content: `The current server date and time is ${date.getFullYear()}-${date.getMonth()}-${date.getDate()}, ${date.getHours()}:${date.getMinutes()}.`,
+        ephemeral: true,
+    });
+}
 
-//const execute = async function(interaction)
-//{
-//  const d = new Date(timestamp);
-//  date = d.getHours() + ":" + d.getMinutes();
-//  console.log(date);
-//  await interaction.reply({
-//         content: `Time is ${halp me carnagion}`,
-//    });
-//}
-   
-//execute
 module.exports =
 {
     data,
