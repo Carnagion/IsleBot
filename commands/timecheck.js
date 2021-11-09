@@ -18,7 +18,6 @@ data.setDescription("Shows the current time in isleward");
 //  console.log(date);
 //  await interaction.reply({
 //         content: `Time is ${halp me carnagion}`,
-//         ephemeral: true,
 //    });
 //}
    
