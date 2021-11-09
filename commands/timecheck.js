@@ -7,7 +7,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 //Slash Command
 const data = new SlashCommandBuilder();
 data.setName("timecheck");
-data.setDescription("Shows what is the current time in isleward");
+data.setDescription("Shows the current time in isleward");
 
 //the time
 
