@@ -1,3 +1,5 @@
+// credit to Mclnoot for the idea
+
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 const data = new SlashCommandBuilder();
