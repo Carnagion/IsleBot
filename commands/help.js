@@ -10,7 +10,7 @@ data.setDescription("Shows available commands!");
 const execute = async function(interaction)
 {
   await interaction.reply({
-        content: `All available commands: /help - Shows available commands! \n /roll - Rolls a random number between 0-100, both inclusive. \n /timecheck - Shows the current time in isleward. \n This bot is not complete, feel free to pull request on https://github.com/Carnagion/IsleBot`
+        content: `All available commands: /help - Shows available commands! \n /roll - Rolls a random number between 0-100, both inclusive. \n /timecheck - Shows the current time in isleward. \n This bot is not complete, feel free to pull request on https://github.com/Carnagion/IsleBot`,
   });
 }  
 
