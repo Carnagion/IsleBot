@@ -12,7 +12,7 @@ const execute = async function(interaction)
     let timestamp = Date.now();
     let date = new Date(timestamp);
     await interaction.reply({
-        content: `The current server date and time is ${date.getHours()}:${date.getMinutes()}.`,
+        content: `The current server time is ${date.getHours()}:${date.getMinutes()}.`,
         ephemeral: false,
     });
 }
