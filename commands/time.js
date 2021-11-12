@@ -1,4 +1,5 @@
 // credit to Mclnoot for the idea
+// credit to Carnagion for the code
 
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
@@ -11,8 +12,8 @@ const execute = async function(interaction)
     let timestamp = Date.now();
     let date = new Date(timestamp);
     await interaction.reply({
-        content: `The current server date and time is ${date.getFullYear()}-${date.getMonth()}-${date.getDate()}, ${date.getHours()}:${date.getMinutes()}.`,
-        ephemeral: true,
+        content: `The current server date and time is ${date.getHours()}:${date.getMinutes()}.`,
+        ephemeral: false,
     });
 }
 
