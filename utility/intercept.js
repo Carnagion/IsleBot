@@ -20,10 +20,11 @@ const intercept = function()
 
         try
         {
-            let words = message.content.split(" ").map(word => word.toLowerCase());
+            let content = message.content.toLowerCase();
+            let words = content.split(" ");
             for (let phrase of bot.phrases.values())
             {
-                if (!message.content.toLowerCase().includes(phrase.keywords[0][0]))
+                if (!content.includes(phrase.keywords[0][0]))
                 {
                     continue;
                 }
