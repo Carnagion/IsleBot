@@ -21,7 +21,7 @@ const intercept = function()
 
         try
         {
-            let content = message.content.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim();
+            let content = message.content.toLowerCase().replace(/[.,\/#?!$%\^&\*;:{}=\-_`~()]/g,"").trim();
             let words = content.split(" ");
             for (let phrase of bot.phrases.values())
             {
