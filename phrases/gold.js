@@ -1,6 +1,7 @@
 //this new json feature is bussin'. Respectfully
+
 const { similarity } = require("../utility/helper/similarity.js");
-const { herbs } = require("../constants.json");
+const { gold } = require("../constants.json");
 
 const keywords = [
     ["gold", "golds"],
