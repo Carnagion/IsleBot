@@ -3,7 +3,7 @@ const { similarity } = require("../utility/helper/similarity.js");
 const keywords = [
     ["herb", "herbs"],
     ["gather", "harvest", "find", "get"],
-    ["how", "where"],
+    ["how", "where", "what"],
 ];
 
 const match = function(words)
