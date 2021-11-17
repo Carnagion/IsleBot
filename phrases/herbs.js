@@ -2,7 +2,7 @@ const { similarity } = require("../utility/helper/similarity.js");
 const { herbs } = require("../constants.json");
 
 const keywords = [
-    ["herb", "herbs"],
+    ["herbs", "herb"],
     ["gather", "harvest", "find", "get"],
     ["how", "where", "what"],
 ];
