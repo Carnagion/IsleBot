@@ -1,6 +1,7 @@
 const filesystem = require("fs");
 const { Collection } = require("discord.js");
 const { bot } = require("./login.js");
+const { averagelengthsum } = require("../utility/helper/similarity.js");
 
 const intercept = function()
 {
@@ -20,11 +21,25 @@ const intercept = function()
 
         try
         {
-            let content = message.content.toLowerCase();
+            let content = message.content.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim();
             let words = content.split(" ");
             for (let phrase of bot.phrases.values())
             {
-                if (!content.includes(phrase.keywords[0][0]))
+                let match = false;
+                for (let keyword of phrase.keywords[0])
+                {
+                    if (content.includes(keyword))
+                    {
+                        match = true;
+                        break;
+                    }
+                }
+                if (!match)
+                {
+                    continue;
+                }
+                
+                if (content.length >= 5 * averagelengthsum(phrase.keywords))
                 {
                     continue;
                 }
