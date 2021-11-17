@@ -15,7 +15,24 @@ const similarity = function(words, wordgroups)
     return similarity;
 }
 
+const averagelengthsum = function(wordgroups)
+{
+    let sum = 0;
+    for (let wordgroup of wordgroups)
+    {
+        let wordaverage = 0;
+        for (let word of wordgroup)
+        {
+            wordaverage += word.length;
+        }
+        wordaverage /= wordgroup.length;
+        sum += wordaverage;
+    }
+    return sum;
+}
+
 module.exports =
 {
     similarity,
+    averagelengthsum,
 }
