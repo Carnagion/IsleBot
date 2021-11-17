@@ -1,8 +1,9 @@
 const { similarity } = require("../utility/helper/similarity.js");
 
 const keywords = [
-    ["fishing", "fish", "fishing rod", "sun carp", "fishrod",],
-    ["find", "get", "gather"],
+    ["fishing", "fish"],
+    ["rod"],
+    ["find", "get", "obtain"],
     ["how", "where"],
 ];
 
