@@ -5,12 +5,22 @@ const { averagelengthsum } = require("../utility/helper/similarity.js");
 
 const intercept = function()
 {
-    bot.phrases = new Collection();
-    let phraseFiles = filesystem.readdirSync("./phrases").filter(filePath => filePath.endsWith(".js"));
-    for (let filePath of phraseFiles)
+    try
     {
-        let phrase = require(`../phrases/${filePath}`);
-        bot.phrases.set(phrase.keywords[0][0], phrase);
+        console.log("\nRegistering phrases...");
+        bot.phrases = new Collection();
+        let phraseFiles = filesystem.readdirSync("./phrases").filter(filePath => filePath.endsWith(".js"));
+        for (let filePath of phraseFiles)
+        {
+            let phrase = require(`../phrases/${filePath}`);
+            bot.phrases.set(phrase.keywords[0][0], phrase);
+        }
+        console.log("Successfully registered phrases.");
+    }
+    catch (error)
+    {
+        console.log("Failed to register commands due to an error.");
+        console.error(error);
     }
 
     bot.on("messageCreate", async(message) => {
