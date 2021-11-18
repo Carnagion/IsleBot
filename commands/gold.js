@@ -1,14 +1,14 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { herbs } = require("../constants.json");
+const { gold } = require("../constants.json");
 
 const data = new SlashCommandBuilder();
-data.setName("herbs");
-data.setDescription("Find out how to find and harvest herbs.");
+data.setName("gold");
+data.setDescription("Find out more about gold.");
 
 const execute = async function(interaction)
 {
     await interaction.reply({
-        content: herbs,
+        content: gold,
         ephemeral: true,
     });
 }

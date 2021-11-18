@@ -9,6 +9,7 @@ const execute = async function(interaction)
 {
     await interaction.reply({
         content: fishingrod,
+        ephemeral: true,
     });
 }
 
