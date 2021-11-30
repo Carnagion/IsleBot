@@ -1,4 +1,4 @@
-//any1 have good wand or neck item to trade? pls (contact: whentheimpos)
+//any1 have good wand or neck item to trade? pls (IGN: whentheimpos)
 const { similarity } = require("../utility/helper/similarity.js");
 const { herbs } = require("../constants.json");
 
