@@ -57,6 +57,7 @@ const execute = async function(interaction)
                     content: "No pages were found that match the specified title. Perhaps try using a different one.",
                     ephemeral: true,
                 });
+                return;
             }
 
             let searchEmbed = new MessageEmbed();
