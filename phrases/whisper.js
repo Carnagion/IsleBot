@@ -1,5 +1,5 @@
 const { similarity } = require("../utility/helper/similarity.js");
-const { herbs } = require("../constants.json");
+const { whisper } = require("../constants.json");
 
 const keywords = [
     ["whisper", "dm"],
@@ -15,7 +15,7 @@ const match = function(words)
 const respond = function(message)
 {
     message.reply({
-        content: whisperandstuff,
+        content: whisper,
     });
 }
 
