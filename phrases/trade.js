@@ -1,6 +1,6 @@
 //any1 have good wand or neck item to trade? pls (IGN: whentheimpos)
 const { similarity } = require("../utility/helper/similarity.js");
-const { herbs } = require("../constants.json");
+const { trade } = require("../constants.json");
 
 const keywords = [
     ["trade", "trading"],
@@ -16,7 +16,7 @@ const match = function(words)
 const respond = function(message)
 {
     message.reply({
-        content: tradeandstuffs,
+        content: trade,
     });
 }
 
