@@ -1,4 +1,3 @@
-//any1 have good wand or neck item to trade? pls (IGN: whentheimpos)
 const { similarity } = require("../utility/helper/similarity.js");
 const { trade } = require("../constants.json");
 
