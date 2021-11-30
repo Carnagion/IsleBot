@@ -13,7 +13,7 @@ const match = function(words)
 const respond = function(message)
 {
     let options = ["Did someone say flabbers? :eyes:", "*woof woof*", "*wags tail*", "Here you go. Have a picture of flabbers. Enjoy your day :D"];
-    message.channel.send({
+    message.reply({
         content: random(options),
         files: ["./images/flabbers.png"],
     });
