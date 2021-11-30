@@ -1,10 +1,10 @@
 const { similarity } = require("../utility/helper/similarity.js");
-const { herbs } = require("../constants.json");
+const { mail } = require("../constants.json");
 
 const keywords = [
     ["mails", "mail", "mailbox"],
     ["open", "access", "is", "are"],
-    ["how", "where",],
+    ["how", "where", "what"],
 ];
 
 const match = function(words)
