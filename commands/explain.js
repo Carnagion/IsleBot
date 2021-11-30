@@ -8,8 +8,8 @@ data.addStringOption(option => option.setName("feature").setDescription("The fea
 
 const execute = async function(interaction)
 {
-    const feature = interaction.options.getString("feature");
-    const phrase = bot.phrases.get(feature);
+    let feature = interaction.options.getString("feature");
+    let phrase = bot.phrases.get(feature);
     if (phrase == null)
     {
         await interaction.reply({
